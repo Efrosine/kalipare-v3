@@ -257,6 +257,61 @@ class DocumentTypeSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'type_name' => 'Surat Keterangan Kematian',
+                'number_registration' => 'No. Reg : 472.12/&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/35.07.11.2002/2025',
+                'form_structure' => json_encode([
+                    [
+                        "name" => "nik-1",
+                        "type" => "text",
+                        "label" => "Other Applicant NIK",
+                        "is_required" => true
+                    ],
+                    [
+                        "name" => "reporter_relationship",
+                        "type" => "text",
+                        "label" => "Hubungan pelapor",
+                        "is_required" => true
+                    ],
+                    [
+                        "name" => "death_day",
+                        "type" => "text",
+                        "label" => "Hari Kematian",
+                        "is_required" => true
+                    ],
+                    [
+                        "name" => "death_date",
+                        "type" => "date",
+                        "label" => "Tanggal Kematian",
+                        "is_required" => true
+                    ],
+                    [
+                        "name" => "death_time",
+                        "type" => "text",
+                        "label" => "Waktu Kematian",
+                        "is_required" => true
+                    ],
+                    [
+                        "name" => "death_location",
+                        "type" => "text",
+                        "label" => "Tempat Kematian",
+                        "is_required" => true
+                    ],
+                    [
+                        "name" => "death_cause",
+                        "type" => "text",
+                        "label" => "Penyebab Kematian",
+                        "is_required" => true
+                    ],
+
+
+                ]),
+                'template' => file_get_contents(
+                    database_path('seeders/template/kematian.html')
+                ),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
         ];
 
         // Insert all document types at once

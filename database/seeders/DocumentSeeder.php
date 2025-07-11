@@ -105,6 +105,23 @@ class DocumentSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'applicant_id' => 3507110712560003,
+                'document_type_id' => 7, // Death Certificate
+                'purpose' => 'Pengajuan Surat Keterangan Kematian',
+                'signature_date' => '1999-01-01',
+                'additional_data' => json_encode([
+                    'nik-1' => '3507116006130002',
+                    'reporter_relationship' => 'Ayah Kandung',
+                    'death_day' => 'Kamis',
+                    'death_date' => '2025-12-31',
+                    'death_time' => '12:00',
+                    'death_location' => 'Tempat Kematian',
+                    'death_cause' => 'Penyebab Kematian',
+                ]),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
         ];
 
         // Insert all documents at once
