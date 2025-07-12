@@ -74,8 +74,8 @@
             /* --- JUDUL SURAT --- */
             .letter-title {
                 text-align: center;
-                margin-top: 0px;
-                margin-bottom: 0px;
+                margin-top: 20px;
+                margin-bottom: 10px;
             }
 
             .letter-title h4 {
@@ -112,7 +112,6 @@
             }
 
             .data-table td {
-                padding: 1px 0;
                 vertical-align: top;
             }
 
@@ -135,7 +134,7 @@
             /* --- BLOK TANDA TANGAN --- */
             .signature-table {
                 width: 100%;
-                margin-top: -15px;
+                margin-top: 10px;
             }
 
             .signature-cell-3col {
@@ -144,8 +143,12 @@
                 vertical-align: bottom;
             }
 
+            .signature-cell-3col p {
+                margin: 5px 0;
+            }
+
             .signature-space {
-                height: 20px;
+                height: 40px;
             }
 
             .signature-name {
@@ -220,7 +223,9 @@
                                             {{ $applicant->date_of_birth ?? '-' }}
                                         </td>
                                         <td style="width: 40%; text-align: left; padding: 0">
-                                            Umur: <b style="font-weight: bold">{{ $applicant->age ?? '-' }}</b> Tahun
+                                            Umur:
+                                            <span style="font-weight: bold">{{ $applicant->age??'-' }}</span>
+                                            Tahun
                                         </td>
                                     </tr>
                                 </table>
@@ -361,8 +366,11 @@
                     </tr>
                     <tr>
                         <td class="signature-cell-3col">
-                            <p>Mengetahui,</p>
-                            <p>Ketua RT {{ $applicant->familyCard->rt ?? '-' }}</p>
+                            <p></p>
+                            <p>
+                                Mengetahui,<br />
+                                Ketua RT {{ $applicant->familyCard->rt ?? '-' }}
+                            </p>
                             <div class="signature-space"></div>
                             <p class="signature-name">(..............................)</p>
                         </td>

@@ -46,8 +46,15 @@ class DocumentForm
                 Section::make('Document Details')
                     ->schema([
                         Select::make('document_type_id')
-                            ->relationship('documentType', 'type_name')
-                            ->searchable()
+                            ->relationship(
+                                'documentType',
+                                titleAttribute: 'type_name',
+                                modifyQueryUsing: fn(Builder $query) => $query->orderBy('type_name')
+                            )
+                            ->getOptionLabelFromRecordUsing(fn(DocumentType $record): string =>
+                                "{$record->type_name} - {$record->number_registration}")
+                            ->searchable(['type_name', 'number_registration'])
+                            ->preload()
                             ->required()
                             ->live() // IMPORTANT: This makes the form reactive
                             ->label('Document Type'),

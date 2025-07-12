@@ -18,7 +18,7 @@ class DocumentTypeSeeder extends Seeder
         $documentTypes = [
             [
                 'type_name' => 'Business Domicile',
-                'number_registration' => '510.4/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/35.07.11.2002/2025',
+                'number_registration' => 'No. Reg : 510.4/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/35.07.11.2002/2025',
                 'form_structure' => json_encode([
                     [
                         "name" => "business_name",

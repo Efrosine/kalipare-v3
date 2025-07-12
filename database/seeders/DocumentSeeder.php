@@ -91,12 +91,12 @@ class DocumentSeeder extends Seeder
             ],
             [
                 'applicant_id' => 3507110712560003,
-                'document_type_id' => 6, // Personal License
+                'document_type_id' => 6, // Tidak Mampu
                 'purpose' => 'Pengajuan Surat Izin Tidak Mampu',
                 'signature_date' => '1999-01-01',
                 'additional_data' => json_encode([
                     'nik-1' => '3507116006130002',
-                    'family_relation' => 'Ayah Kandung',
+                    'family_relationship' => 'Ayah Kandung',
                     'student_class_semester' => '1',
                     'student_current_school' => 'Sekolah A',
                     'student_destination_school' => 'Sekolah B',
