@@ -64,7 +64,7 @@ class DocumentTypeSeeder extends Seeder
                     ]
                 ]),
                 'template' => file_get_contents(
-                    database_path('seeders/template/domisili_perusahaan.html')
+                    database_path('seeders/template/domisili_perusahaan.blade.php')
                 ),
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -74,7 +74,7 @@ class DocumentTypeSeeder extends Seeder
                 'number_registration' => 'No. Reg : 470/&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/35.07.11.2002/2025',
                 'form_structure' => null,
                 'template' => file_get_contents(
-                    database_path('seeders/template/domisi_pribadi.html')
+                    database_path('seeders/template/domisi_pribadi.blade.php')
                 ),
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -109,7 +109,7 @@ class DocumentTypeSeeder extends Seeder
                     ],
                 ]),
                 'template' => file_get_contents(
-                    database_path('seeders/template/pasutri.html')
+                    database_path('seeders/template/pasutri.blade.php')
                 ),
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -163,7 +163,7 @@ class DocumentTypeSeeder extends Seeder
 
                 ]),
                 'template' => file_get_contents(
-                    database_path('seeders/template/lembaga.html')
+                    database_path('seeders/template/lembaga.blade.php')
                 ),
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -204,7 +204,7 @@ class DocumentTypeSeeder extends Seeder
                     ]
                 ]),
                 'template' => file_get_contents(
-                    database_path('seeders/template/usaha.html')
+                    database_path('seeders/template/usaha.blade.php')
                 ),
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -252,7 +252,7 @@ class DocumentTypeSeeder extends Seeder
 
                 ]),
                 "template" => file_get_contents(
-                    database_path('seeders/template/tidak_mampu.html')
+                    database_path('seeders/template/tidak_mampu.blade.php')
                 ),
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -307,7 +307,7 @@ class DocumentTypeSeeder extends Seeder
 
                 ]),
                 'template' => file_get_contents(
-                    database_path('seeders/template/kematian.html')
+                    database_path('seeders/template/kematian.blade.php')
                 ),
                 'created_at' => now(),
                 'updated_at' => now(),
