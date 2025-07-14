@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Documents\Schemas;
 
 use App\Models\DocumentType;
 use App\Models\FamilyMember;
+use App\Models\Signatory;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -37,10 +38,24 @@ class DocumentForm
                         TextInput::make('purpose')
                             ->required()
                             ->label('Keperluan'),
+
                         DatePicker::make('signature_date')
                             ->default(now())
                             ->required()
                             ->label('Tanggal Tanda Tangan'),
+
+                        Select::make('signatory_id')
+                            ->relationship(
+                                'signatory',
+                                titleAttribute: 'signatory_name',
+                                modifyQueryUsing: fn(Builder $query) => $query->orderBy('signatory_name')
+                            )
+                            ->getOptionLabelFromRecordUsing(fn(Signatory $record): string =>
+                                "{$record->signatory_name} - {$record->signatory_position}")
+                            ->searchable(['signatory_name', 'signatory_position'])
+                            ->preload()
+                            ->required()
+                            ->label('Penanggung Jawab'),
                     ]),
 
                 Section::make('Detail Dokumen')

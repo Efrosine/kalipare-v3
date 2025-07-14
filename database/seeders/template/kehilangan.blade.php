@@ -332,9 +332,17 @@
             <table class="signature-table">
                 <tr>
                     <td class="signature-cell">
-                        <p>Mengetahui,<br />a.n. Kepala Desa Kalipare<br />Sekretaris Desa</p>
+                        <p>
+                            Kalipare, {{ $document->signature_date ?? '-' }}<br />
+                            @if(($document->signatory->signatory_position ?? '') === 'Kepala Desa')
+                                Kepala Desa Kalipare<br />
+                            @else
+                                a.n Kepala Desa Kalipare<br />
+                                {{ $document->signatory->signatory_position ?? '-' }}
+                            @endif
+                        </p>
                         <div class="signature-space"></div>
-                        <p class="signature-name">(AHMAD YUSRO)</p>
+                        <p class="signature-name">({{ $document->signatory->signatory_name ?? '-' }})</p>
                     </td>
                     <td class="signature-cell">
                         <p>Kalipare, {{ $document->signature_date ?? '-' }}</p>

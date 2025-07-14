@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(FamilyCardSeeder::class);
         $this->call(FamilyMemberSeeder::class);
         $this->call(DocumentTypeSeeder::class);
+        $this->call(SignatorySeeder::class);
         $this->call(DocumentSeeder::class);
     }
 }

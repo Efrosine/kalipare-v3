@@ -21,6 +21,7 @@ class DocumentSeeder extends Seeder
                 'document_type_id' => 1, // Business Domicile
                 'purpose' => 'Pengajuan Surat Keterangan (contoh)',
                 'signature_date' => '1945-08-17',
+                'signatory_id' => 1,
                 'additional_data' => json_encode([
                     'business_name' => 'nama usaha',
                     'business_type' => 'jenis usaha',
@@ -38,6 +39,7 @@ class DocumentSeeder extends Seeder
                 'document_type_id' => 2, // Personal Domicile
                 'purpose' => 'Pengajuan Surat Keterangan Domisili Pribadi',
                 'signature_date' => '1999-01-01',
+                'signatory_id' => 2,
                 'additional_data' => null,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -47,6 +49,7 @@ class DocumentSeeder extends Seeder
                 'document_type_id' => 3, // Marriage Certificate
                 'purpose' => 'Pengajuan Surat Keterangan Nikah',
                 'signature_date' => '1999-01-01',
+                'signatory_id' => 1,
                 'additional_data' => json_encode([
                     'applicant_status' => 'Suami',
                     'other_applicant_status' => 'Istri',
@@ -62,6 +65,7 @@ class DocumentSeeder extends Seeder
                 'document_type_id' => 4, // Institution Domicile
                 'purpose' => 'Pengajuan Surat Keterangan Domisili Lembaga',
                 'signature_date' => '1999-01-01',
+                'signatory_id' => 2,
                 'additional_data' => json_encode([
                     'institution_name' => 'Nama Lembaga',
                     'institution_type' => 'Jenis Lembaga',
@@ -79,6 +83,7 @@ class DocumentSeeder extends Seeder
                 'document_type_id' => 5, // Business License
                 'purpose' => 'Pengajuan Surat Izin Usaha',
                 'signature_date' => '1999-01-01',
+                'signatory_id' => 1,
                 'additional_data' => json_encode([
                     'business_type' => 'Jenis Usaha',
                     'business_name' => 'Nama Usaha',
@@ -94,6 +99,7 @@ class DocumentSeeder extends Seeder
                 'document_type_id' => 6, // Tidak Mampu
                 'purpose' => 'Pengajuan Surat Izin Tidak Mampu',
                 'signature_date' => '1999-01-01',
+                'signatory_id' => 2,
                 'additional_data' => json_encode([
                     'nik-1' => '3507116006130002',
                     'family_relationship' => 'Ayah Kandung',
@@ -110,6 +116,7 @@ class DocumentSeeder extends Seeder
                 'document_type_id' => 7, // Death Certificate
                 'purpose' => 'Pengajuan Surat Keterangan Kematian',
                 'signature_date' => '1999-01-01',
+                'signatory_id' => 1,
                 'additional_data' => json_encode([
                     'nik-1' => '3507116006130002',
                     'reporter_relationship' => 'Ayah Kandung',
@@ -127,6 +134,7 @@ class DocumentSeeder extends Seeder
                 'document_type_id' => 8, // Loss Certificate
                 'purpose' => 'Pengajuan Surat Keterangan Kehilangan',
                 'signature_date' => '1999-01-01',
+                'signatory_id' => 2,
                 'additional_data' => json_encode([
                     'arr-item_names' => 'Barang Hilang 1, Barang Hilang 2',
                     'item_owner' => 'Nama Pemilik Barang',

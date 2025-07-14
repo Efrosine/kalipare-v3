@@ -1,397 +1,402 @@
 <!DOCTYPE html>
 <html lang="id">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Surat Keterangan Tidak Mampu</title>
-        <style>
-            @page {
-                size: 21cm 33cm;
-                margin: 0.5cm 1.9cm 1cm 1.9cm;
-            }
 
-            body {
-                font-family: "Times New Roman", Times, serif;
-                font-size: 12pt;
-                line-height: 1.5;
-                color: #000;
-            }
+<head>
+    <meta charset="UTF-8" />
+    <title>Surat Keterangan Tidak Mampu</title>
+    <style>
+        @page {
+            size: 21cm 33cm;
+            margin: 0.5cm 1.9cm 1cm 1.9cm;
+        }
 
-            .container {
-                width: 100%;
-            }
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            color: #000;
+        }
 
-            /* --- KOP SURAT --- */
-            .header {
-                border-bottom: 4px double #000;
-                padding-bottom: 10px;
-            }
+        .container {
+            width: 100%;
+        }
 
-            .header-table {
-                width: 100%;
-                border-collapse: collapse;
-            }
+        /* --- KOP SURAT --- */
+        .header {
+            border-bottom: 4px double #000;
+            padding-bottom: 10px;
+        }
 
-            .logo-cell {
-                width: 100px;
-                vertical-align: middle;
-                text-align: center;
-            }
+        .header-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-            .text-cell {
-                vertical-align: middle;
-                text-align: center;
-            }
+        .logo-cell {
+            width: 100px;
+            vertical-align: middle;
+            text-align: center;
+        }
 
-            .logo {
-                width: 90px;
-                height: auto;
-            }
+        .text-cell {
+            vertical-align: middle;
+            text-align: center;
+        }
 
-            .header-text p {
-                margin: 0;
-                line-height: 1.2;
-            }
+        .logo {
+            width: 90px;
+            height: auto;
+        }
 
-            .header-text .line1 {
-                font-size: 16pt;
-                font-weight: bold;
-            }
+        .header-text p {
+            margin: 0;
+            line-height: 1.2;
+        }
 
-            .header-text .line2 {
-                font-size: 18pt;
-                font-weight: bold;
-            }
+        .header-text .line1 {
+            font-size: 16pt;
+            font-weight: bold;
+        }
 
-            .header-text .line3 {
-                font-size: 11pt;
-            }
+        .header-text .line2 {
+            font-size: 18pt;
+            font-weight: bold;
+        }
 
-            .header-text .line4 {
-                font-size: 11pt;
-                font-style: italic;
-            }
+        .header-text .line3 {
+            font-size: 11pt;
+        }
 
-            /* --- JUDUL SURAT --- */
-            .letter-title {
-                text-align: center;
-                margin-top: 20px;
-                margin-bottom: 10px;
-            }
+        .header-text .line4 {
+            font-size: 11pt;
+            font-style: italic;
+        }
 
-            .letter-title h4 {
-                margin: 0;
-                font-size: 12pt;
-                text-decoration: underline;
-                font-weight: bold;
-            }
+        /* --- JUDUL SURAT --- */
+        .letter-title {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
 
-            .letter-title p {
-                margin: 0;
-                font-size: 12pt;
-            }
+        .letter-title h4 {
+            margin: 0;
+            font-size: 12pt;
+            text-decoration: underline;
+            font-weight: bold;
+        }
 
-            /* --- KONTEN UTAMA --- */
-            .content {
-                text-align: justify;
-                margin-bottom: -30px;
-            }
+        .letter-title p {
+            margin: 0;
+            font-size: 12pt;
+        }
 
-            .content p {
-                margin: 0px 0;
-            }
+        /* --- KONTEN UTAMA --- */
+        .content {
+            text-align: justify;
+            margin-bottom: -30px;
+        }
 
-            .indent {
-                text-indent: 50px;
-            }
+        .content p {
+            margin: 0px 0;
+        }
 
-            /* --- TABEL DATA --- */
-            .data-table {
-                width: 100%;
-                border-collapse: collapse;
-                margin: 0px 0 0px 50px;
-            }
+        .indent {
+            text-indent: 50px;
+        }
 
-            .data-table td {
-                vertical-align: top;
-            }
+        /* --- TABEL DATA --- */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0px 0 0px 50px;
+        }
 
-            .data-table .label {
-                width: 30%;
-            }
+        .data-table td {
+            vertical-align: top;
+        }
 
-            .data-table .separator {
-                width: 5%;
-            }
+        .data-table .label {
+            width: 30%;
+        }
 
-            .data-table .value {
-                font-weight: bold;
-            }
+        .data-table .separator {
+            width: 5%;
+        }
 
-            .value-normal {
-                font-weight: normal;
-            }
+        .data-table .value {
+            font-weight: bold;
+        }
 
-            /* --- BLOK TANDA TANGAN --- */
-            .signature-table {
-                width: 100%;
-                margin-top: 10px;
-            }
+        .value-normal {
+            font-weight: normal;
+        }
 
-            .signature-cell-3col {
-                width: 33.33%;
-                text-align: center;
-                vertical-align: bottom;
-            }
+        /* --- BLOK TANDA TANGAN --- */
+        .signature-table {
+            width: 100%;
+            margin-top: 10px;
+        }
 
-            .signature-cell-3col p {
-                margin: 5px 0;
-            }
+        .signature-cell-3col {
+            width: 33.33%;
+            text-align: center;
+            vertical-align: bottom;
+        }
 
-            .signature-space {
-                height: 40px;
-            }
+        .signature-cell-3col p {
+            margin: 5px 0;
+        }
 
-            .signature-name {
-                font-weight: bold;
-                text-decoration: underline;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <header class="header">
-                <table class="header-table">
+        .signature-space {
+            height: 40px;
+        }
+
+        .signature-name {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <table class="header-table">
+                <tr>
+                    <td class="logo-cell">
+                        <img src="{{ $logoBase64 }}" alt="Logo" class="logo" />
+                    </td>
+                    <td class="text-cell">
+                        <div class="header-text">
+                            <p class="line1">PEMERINTAH KABUPATEN MALANG</p>
+                            <p class="line1">KECAMATAN KALIPARE</p>
+                            <p class="line2">DESA KALIPARE</p>
+                            <p class="line3">Alamat: Jalan Soekarno-Hatta No. 577 Kalipare Kode Pos 65166</p>
+                            <p class="line4">
+                                website: desa-kalipare.malangkab.go.id - email: desakalipare@gmail.com
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </header>
+
+        <main>
+            <div class="letter-title">
+                <h4>SURAT KETERANGAN TIDAK MAMPU</h4>
+                <p>{!!$document_type->number_registration ?? '-'!!}</p>
+            </div>
+
+            <div class="content">
+                <p class="indent">
+                    Yang bertanda tangan di bawah ini Atas Nama Kepala Desa Kalipare Kecamatan Kalipare Kabupaten
+                    Malang, menerangkan dengan sebenarnya bahwa penduduk kami sebagai berikut:
+                </p>
+
+                <table class="data-table">
                     <tr>
-                        <td class="logo-cell">
-                            <img src="{{ $logoBase64 }}" alt="Logo" class="logo" />
+                        <td class="label">Nama Lengkap</td>
+                        <td class="separator">:</td>
+                        <td class="value">{{ $applicant->name ?? '-' }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">NIK</td>
+                        <td class="separator">:</td>
+                        <td class="value">{{ $applicant->national_id_number ?? '-' }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">ID DTKS</td>
+                        <td class="separator">:</td>
+                        <td class="value">{{ $additional_data['dtks_id'] ?? '-' }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Tempat Lahir</td>
+                        <td class="separator">:</td>
+                        <td class="value">{{ $applicant->place_of_birth ?? '-' }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Tanggal Lahir</td>
+                        <td class="separator">:</td>
+                        <td>
+                            <table style="width: 100%; border-collapse: collapse">
+                                <tr>
+                                    <td class="value" style="width: 60%; text-align: left; padding: 0">
+                                        {{ $applicant->date_of_birth ?? '-' }}
+                                    </td>
+                                    <td style="width: 40%; text-align: left; padding: 0">
+                                        Umur:
+                                        <span style="font-weight: bold">{{ $applicant->age ?? '-' }}</span>
+                                        Tahun
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
-                        <td class="text-cell">
-                            <div class="header-text">
-                                <p class="line1">PEMERINTAH KABUPATEN MALANG</p>
-                                <p class="line1">KECAMATAN KALIPARE</p>
-                                <p class="line2">DESA KALIPARE</p>
-                                <p class="line3">Alamat: Jalan Soekarno-Hatta No. 577 Kalipare Kode Pos 65166</p>
-                                <p class="line4">
-                                    website: desa-kalipare.malangkab.go.id - email: desakalipare@gmail.com
-                                </p>
-                            </div>
+                    </tr>
+                    <tr>
+                        <td class="label">Jenis Kelamin</td>
+                        <td class="separator">:</td>
+                        <td class="value">{{ $applicant->gender ?? '-' }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Agama</td>
+                        <td class="separator">:</td>
+                        <td class="value">{{ $applicant->religion ?? '-' }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Hub. Keluarga</td>
+                        <td class="separator">:</td>
+                        <td class="value">{{ $additional_data['family_relationship'] ?? '-' }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Pekerjaan</td>
+                        <td class="separator">:</td>
+                        <td class="value">{{ $applicant->occupation ?? '-' }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Alamat</td>
+                        <td class="separator">:</td>
+                        <td class="value value-normal">
+                            {{ isset($applicant) && $applicant->familyCard ? $applicant->familyCard->fullAddress() :
+    '-' }}
                         </td>
                     </tr>
                 </table>
-            </header>
 
-            <main>
-                <div class="letter-title">
-                    <h4>SURAT KETERANGAN TIDAK MAMPU</h4>
-                    <p>{!!$document_type->number_registration??'-'!!}</p>
-                </div>
+                <p class="indent">
+                    Adalah benar-benar dari keluarga yang tidak mampu, dan penghasilan tidak menentu. Adapun surat
+                    keterangan ini dipergunakan khusus untuk kelengkapan Administrasi Pendaftaran Sekolah bagi
+                    Anaknya:
+                </p>
 
-                <div class="content">
-                    <p class="indent">
-                        Yang bertanda tangan di bawah ini Atas Nama Kepala Desa Kalipare Kecamatan Kalipare Kabupaten
-                        Malang, menerangkan dengan sebenarnya bahwa penduduk kami sebagai berikut:
-                    </p>
-
-                    <table class="data-table">
-                        <tr>
-                            <td class="label">Nama Lengkap</td>
-                            <td class="separator">:</td>
-                            <td class="value">{{ $applicant->name ?? '-' }}</td>
-                        </tr>
-                        <tr>
-                            <td class="label">NIK</td>
-                            <td class="separator">:</td>
-                            <td class="value">{{ $applicant->national_id_number ?? '-' }}</td>
-                        </tr>
-                        <tr>
-                            <td class="label">ID DTKS</td>
-                            <td class="separator">:</td>
-                            <td class="value">{{ $additional_data['dtks_id'] ?? '-' }}</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Tempat Lahir</td>
-                            <td class="separator">:</td>
-                            <td class="value">{{ $applicant->place_of_birth ?? '-' }}</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Tanggal Lahir</td>
-                            <td class="separator">:</td>
-                            <td>
-                                <table style="width: 100%; border-collapse: collapse">
-                                    <tr>
-                                        <td class="value" style="width: 60%; text-align: left; padding: 0">
-                                            {{ $applicant->date_of_birth ?? '-' }}
-                                        </td>
-                                        <td style="width: 40%; text-align: left; padding: 0">
-                                            Umur:
-                                            <span style="font-weight: bold">{{ $applicant->age??'-' }}</span>
-                                            Tahun
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="label">Jenis Kelamin</td>
-                            <td class="separator">:</td>
-                            <td class="value">{{ $applicant->gender ?? '-' }}</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Agama</td>
-                            <td class="separator">:</td>
-                            <td class="value">{{ $applicant->religion ?? '-' }}</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Hub. Keluarga</td>
-                            <td class="separator">:</td>
-                            <td class="value">{{ $additional_data['family_relationship'] ?? '-' }}</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Pekerjaan</td>
-                            <td class="separator">:</td>
-                            <td class="value">{{ $applicant->occupation ?? '-' }}</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Alamat</td>
-                            <td class="separator">:</td>
-                            <td class="value value-normal">
-                                {{ isset($applicant) && $applicant->familyCard ? $applicant->familyCard->fullAddress() :
-                                '-' }}
-                            </td>
-                        </tr>
-                    </table>
-
-                    <p class="indent">
-                        Adalah benar-benar dari keluarga yang tidak mampu, dan penghasilan tidak menentu. Adapun surat
-                        keterangan ini dipergunakan khusus untuk kelengkapan Administrasi Pendaftaran Sekolah bagi
-                        Anaknya:
-                    </p>
-
-                    <table class="data-table">
-                        <tr>
-                            <td class="label">Nama Lengkap</td>
-                            <td class="separator">:</td>
-                            <td class="value">{{ isset($other_applicants[1]) ? $other_applicants[1]->name : '-' }}</td>
-                        </tr>
-                        <tr>
-                            <td class="label">NIK</td>
-                            <td class="separator">:</td>
-                            <td class="value">
-                                {{ isset($other_applicants[1]) ? $other_applicants[1]->national_id_number : '-' }}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="label">Tempat Lahir</td>
-                            <td class="separator">:</td>
-                            <td class="value">
-                                {{ isset($other_applicants[1]) ? $other_applicants[1]->place_of_birth : '-' }}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="label">Tanggal Lahir</td>
-                            <td class="separator">:</td>
-                            <td>
-                                <table style="width: 100%; border-collapse: collapse">
-                                    <tr>
-                                        <td class="value" style="width: 60%; text-align: left; padding: 0">
-                                            {{ isset($other_applicants[1]) ? $other_applicants[1]->date_of_birth : '-'
+                <table class="data-table">
+                    <tr>
+                        <td class="label">Nama Lengkap</td>
+                        <td class="separator">:</td>
+                        <td class="value">{{ isset($other_applicants[1]) ? $other_applicants[1]->name : '-' }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">NIK</td>
+                        <td class="separator">:</td>
+                        <td class="value">
+                            {{ isset($other_applicants[1]) ? $other_applicants[1]->national_id_number : '-' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">Tempat Lahir</td>
+                        <td class="separator">:</td>
+                        <td class="value">
+                            {{ isset($other_applicants[1]) ? $other_applicants[1]->place_of_birth : '-' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">Tanggal Lahir</td>
+                        <td class="separator">:</td>
+                        <td>
+                            <table style="width: 100%; border-collapse: collapse">
+                                <tr>
+                                    <td class="value" style="width: 60%; text-align: left; padding: 0">
+                                        {{ isset($other_applicants[1]) ? $other_applicants[1]->date_of_birth : '-'
                                             }}
-                                        </td>
-                                        <td style="width: 40%; text-align: left; padding: 0">
-                                            Umur:
-                                            <b style="font-weight: bold"
-                                                >{{ isset($other_applicants[1]) ? $other_applicants[1]->age : '-' }}</b
-                                            >
-                                            Tahun
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="label">Jenis Kelamin</td>
-                            <td class="separator">:</td>
-                            <td class="value">
-                                {{ isset($other_applicants[1]) ? $other_applicants[1]->gender : '-' }}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="label">Agama</td>
-                            <td class="separator">:</td>
-                            <td class="value">
-                                {{ isset($other_applicants[1]) ? $other_applicants[1]->religion : '-' }}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="label">Pekerjaan</td>
-                            <td class="separator">:</td>
-                            <td class="value">
-                                {{ isset($other_applicants[1]) ? $other_applicants[1]->occupation : '-' }}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="label">Kelas/Semester</td>
-                            <td class="separator">:</td>
-                            <td class="value">{{ $additional_data['student_class_semester'] ?? '-' }}</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Sekolah/Universitas</td>
-                            <td class="separator">:</td>
-                            <td class="value">{{ $additional_data['student_current_school'] ?? '-' }}</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Sekolah/Univ. Tujuan</td>
-                            <td class="separator">:</td>
-                            <td class="value">{{ $additional_data['student_destination_school'] ?? '-' }}</td>
-                        </tr>
-                    </table>
-
-                    <p class="indent">
-                        Demikian untuk menjadikan periksa dan dipergunakan sebagaimana mestinya bagi yang
-                        berkepentingan.
-                    </p>
-                </div>
-            </main>
-
-            <footer>
-                <table class="signature-table">
-                    <tr>
-                        <td class="signature-cell-3col"></td>
-                        <td class="signature-cell-3col"></td>
-                        <td class="signature-cell-3col">
-                            <p>Pemohon</p>
-                            <div class="signature-space"></div>
-                            <p class="signature-name">{{ $applicant->name ?? '-' }}</p>
+                                    </td>
+                                    <td style="width: 40%; text-align: left; padding: 0">
+                                        Umur:
+                                        <b style="font-weight: bold">{{ isset($other_applicants[1]) ? $other_applicants[1]->age : '-' }}</b>
+                                        Tahun
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                     <tr>
-                        <td class="signature-cell-3col">
-                            <p></p>
-                            <p>
-                                Mengetahui,<br />
-                                Ketua RT {{ $applicant->familyCard->rt ?? '-' }}
-                            </p>
-                            <div class="signature-space"></div>
-                            <p class="signature-name">(..............................)</p>
+                        <td class="label">Jenis Kelamin</td>
+                        <td class="separator">:</td>
+                        <td class="value">
+                            {{ isset($other_applicants[1]) ? $other_applicants[1]->gender : '-' }}
                         </td>
-                        <td class="signature-cell-3col">
-                            <p>Ketua RW {{ $applicant->familyCard->rw ?? '-' }}</p>
-                            <div class="signature-space"></div>
-                            <p class="signature-name">(..............................)</p>
+                    </tr>
+                    <tr>
+                        <td class="label">Agama</td>
+                        <td class="separator">:</td>
+                        <td class="value">
+                            {{ isset($other_applicants[1]) ? $other_applicants[1]->religion : '-' }}
                         </td>
-
-                        <td class="signature-cell-3col">
-                            <p>
-                                Kalipare, {{ $document->signature_date ?? '-' }}<br />
-                                a.n Kepala Desa Kalipare<br />
-                                Sekretaris Desa
-                            </p>
-                            <div class="signature-space"></div>
-                            <p class="signature-name">AHMAD YUSRO</p>
+                    </tr>
+                    <tr>
+                        <td class="label">Pekerjaan</td>
+                        <td class="separator">:</td>
+                        <td class="value">
+                            {{ isset($other_applicants[1]) ? $other_applicants[1]->occupation : '-' }}
                         </td>
+                    </tr>
+                    <tr>
+                        <td class="label">Kelas/Semester</td>
+                        <td class="separator">:</td>
+                        <td class="value">{{ $additional_data['student_class_semester'] ?? '-' }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Sekolah/Universitas</td>
+                        <td class="separator">:</td>
+                        <td class="value">{{ $additional_data['student_current_school'] ?? '-' }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Sekolah/Univ. Tujuan</td>
+                        <td class="separator">:</td>
+                        <td class="value">{{ $additional_data['student_destination_school'] ?? '-' }}</td>
                     </tr>
                 </table>
-            </footer>
-        </div>
-    </body>
+
+                <p class="indent">
+                    Demikian untuk menjadikan periksa dan dipergunakan sebagaimana mestinya bagi yang
+                    berkepentingan.
+                </p>
+            </div>
+        </main>
+
+        <footer>
+            <table class="signature-table">
+                <tr>
+                    <td class="signature-cell-3col"></td>
+                    <td class="signature-cell-3col"></td>
+                    <td class="signature-cell-3col">
+                        <p>Pemohon</p>
+                        <div class="signature-space"></div>
+                        <p class="signature-name">{{ $applicant->name ?? '-' }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="signature-cell-3col">
+                        <p></p>
+                        <p>
+                            Mengetahui,<br />
+                            Ketua RT {{ $applicant->familyCard->rt ?? '-' }}
+                        </p>
+                        <div class="signature-space"></div>
+                        <p class="signature-name">(..............................)</p>
+                    </td>
+                    <td class="signature-cell-3col">
+                        <p>Ketua RW {{ $applicant->familyCard->rw ?? '-' }}</p>
+                        <div class="signature-space"></div>
+                        <p class="signature-name">(..............................)</p>
+                    </td>
+
+                    <td class="signature-cell-3col">
+                        <p>
+                            Kalipare, {{ $document->signature_date ?? '-' }}<br />
+                            @if(($document->signatory->signatory_position ?? '') === 'Kepala Desa')
+                                Kepala Desa Kalipare<br />
+                            @else
+                                a.n Kepala Desa Kalipare<br />
+                                {{ $document->signatory->signatory_position ?? '-' }}
+                            @endif
+                        </p>
+                        <div class="signature-space"></div>
+                        <p class="signature-name">{{ $document->signatory->signatory_name ?? '-' }}</p>
+                    </td>
+                </tr>
+            </table>
+        </footer>
+    </div>
+</body>
+
 </html>

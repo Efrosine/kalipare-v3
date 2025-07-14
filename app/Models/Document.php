@@ -15,6 +15,7 @@ class Document extends Model
         "additional_data",
         "purpose",
         "signature_date",
+        "signatory_id", // Added signatory_id to fillable
     ];
 
     protected $casts = [
@@ -44,5 +45,10 @@ class Document extends Model
     public function documentType(): BelongsTo
     {
         return $this->belongsTo(DocumentType::class);
+    }
+
+    public function signatory(): BelongsTo
+    {
+        return $this->belongsTo(Signatory::class);
     }
 }

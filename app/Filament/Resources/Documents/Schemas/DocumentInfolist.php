@@ -26,9 +26,10 @@ class DocumentInfolist
                             ->label('Jenis Dokumen'),
                         TextEntry::make('purpose')
                             ->label('Keperluan'),
+                        TextEntry::make('signatory.signatory_name')
+                            ->label('Penanggung Jawab'),
                         TextEntry::make('signature_date')
-                            ->label('Tanggal Tanda Tangan')
-                            ->columnSpanFull(),
+                            ->label('Tanggal Tanda Tangan'),
                         TextEntry::make('created_at')
                             ->label('Dibuat Pada')
                             ->dateTime(),
