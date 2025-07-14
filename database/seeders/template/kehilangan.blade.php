@@ -205,7 +205,7 @@
         <main>
             <div class="letter-title">
                 <h4>SURAT PENGANTAR LAPORAN KEHILANGAN</h4>
-                <p>{!! $document->document_number ?? '-' !!}</p>
+                <p>{!!$document_type->number_registration ?? '-'!!}</p>
             </div>
 
             <div class="content">
