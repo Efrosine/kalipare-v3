@@ -121,7 +121,25 @@ class DocumentSeeder extends Seeder
                 ]),
                 'created_at' => now(),
                 'updated_at' => now(),
-            ]
+            ],
+            [
+                'applicant_id' => 3507110712560003,
+                'document_type_id' => 8, // Loss Certificate
+                'purpose' => 'Pengajuan Surat Keterangan Kehilangan',
+                'signature_date' => '1999-01-01',
+                'additional_data' => json_encode([
+                    'arr-item_names' => 'Barang Hilang 1, Barang Hilang 2',
+                    'item_owner' => 'Nama Pemilik Barang',
+                    'item_id' => '3507116006130002',
+                    'loss_day' => 'Kamis',
+                    'loss_date' => '2025-12-31',
+                    'loss_time' => '12:00',
+                    'loss_location' => 'Lokasi Kehilangan',
+
+                ]),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ];
 
         // Insert all documents at once

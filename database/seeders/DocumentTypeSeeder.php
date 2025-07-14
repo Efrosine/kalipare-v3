@@ -311,6 +311,61 @@ class DocumentTypeSeeder extends Seeder
                 ),
                 'created_at' => now(),
                 'updated_at' => now(),
+            ],
+            [
+                'type_name' => 'Surat Kehilangan',
+                'number_registration' => 'No. Reg : 337/&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/35.07.11.2002/2025',
+                'form_structure' => json_encode([
+                    [
+                        "name" => "arr-item_names",
+                        "type" => "text",
+                        "label" => "Nama Barang",
+                        "is_required" => true
+                    ],
+                    [
+                        "name" => "item_owner",
+                        "type" => "text",
+                        "label" => "Nama Pemilik",
+                        "is_required" => true
+                    ],
+                    [
+                        "name" => "item_id",
+                        "type" => "text",
+                        "label" => "ID Barang",
+                        "is_required" => true
+                    ],
+                    [
+                        "name" => "loss_day",
+                        "type" => "text",
+                        "label" => "Hari Kehilangan",
+                        "is_required" => true
+                    ],
+                    [
+                        "name" => "loss_date",
+                        "type" => "date",
+                        "label" => "Tanggal Kehilangan",
+                        "is_required" => true
+                    ],
+                    [
+                        "name" => "loss_time",
+                        "type" => "text",
+                        "label" => "Waktu Kehilangan",
+                        "is_required" => true
+                    ],
+                    [
+                        "name" => "loss_location",
+                        "type" => "text",
+                        "label" => "Tempat Kehilangan",
+                        "is_required" => true
+                    ]
+
+                ]),
+                'template' => file_get_contents(
+                    database_path('seeders/template/kehilangan.blade.php')
+                ),
+                'created_at' => now(),
+                'updated_at' => now(),
+
             ]
         ];
 
