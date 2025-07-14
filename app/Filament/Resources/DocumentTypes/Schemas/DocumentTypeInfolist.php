@@ -17,34 +17,41 @@ class DocumentTypeInfolist
         return $schema
             ->columns(1)
             ->components([
-                Section::make('Basic Information')
+                Section::make('Informasi Dasar')
                     ->columns(2)
                     ->schema([
-                        TextEntry::make('type_name')->columnSpanFull(),
-                        TextEntry::make('number_registration')->columnSpanFull(),
+                        TextEntry::make('type_name')
+                            ->label('Nama Tipe')
+                            ->columnSpanFull(),
+                        TextEntry::make('number_registration')
+                            ->label('Nomor Registrasi')
+                            ->columnSpanFull(),
                         TextEntry::make('created_at')
+                            ->label('Dibuat Pada')
                             ->dateTime(),
                         TextEntry::make('updated_at')
+                            ->label('Diperbarui Pada')
                             ->dateTime(),
                     ]),
-                Section::make('Optional Fields')
+                Section::make('Field Opsional')
                     ->columns(1)
                     ->collapsed()
                     ->schema([
                         RepeatableEntry::make('form_structure')
                             ->columns(4)
                             ->schema([
-                                TextEntry::make('name'),
-                                TextEntry::make('label'),
-                                TextEntry::make('type'),
+                                TextEntry::make('name')->label('Nama'),
+                                TextEntry::make('label')->label('Label'),
+                                TextEntry::make('type')->label('Tipe'),
                                 TextEntry::make('is_required')
-                                    ->formatStateUsing(fn($state) => $state ? 'true' : 'false'),
+                                    ->label('Wajib')
+                                    ->formatStateUsing(fn($state) => $state ? 'Ya' : 'Tidak'),
                             ]),
                     ]),
-                Section::make('PDF Template')
+                Section::make('Template PDF')
                     ->collapsed()
                     ->schema([
-                        PdfViewer::make("View pdf")
+                        PdfViewer::make("Lihat PDF")
                             ->documentUrl(fn(DocumentType $record): string => route('documentsType.streamDummy', ['documentType' => $record->id]))
                             ->height(600),
                     ]),

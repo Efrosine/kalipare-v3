@@ -4,7 +4,7 @@ use App\Http\Controllers\PdfController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return redirect('superadmin/login');
+    return redirect('admin/login');
 });
 
 Route::get('/documents/{document}/preview', [PdfController::class, 'preview'])->name('documents.preview');

@@ -18,53 +18,59 @@ class DocumentTypeForm
         return $schema
             ->columns(1)
             ->components([
-                Section::make('Basic Information')
+                Section::make('Informasi Dasar')
                     ->schema([
                         TextInput::make('type_name')
+                            ->label('Nama Jenis Dokumen')
                             ->required()
-                            ->helperText('The full name of the document type.'),
+                            ->helperText('Nama lengkap jenis dokumen.'),
                         TextInput::make('number_registration')
+                            ->label('Nomor Registrasi')
                             ->required()
-                            ->helperText('The registration number of the document type.'),
+                            ->helperText('Nomor registrasi jenis dokumen.'),
                     ]),
 
-                Section::make('Form Field Builder')
-                    ->description('Define the additional fields needed for this document type.')
+                Section::make('Pembuat Bidang Formulir')
+                    ->description('Tentukan bidang tambahan yang diperlukan untuk jenis dokumen ini.')
                     ->collapsed()
 
                     ->schema([
                         Repeater::make('form_structure')
-                            ->addActionLabel('Add New Field')
+                            ->label('Struktur Formulir')
+                            ->addActionLabel('Tambah Bidang Baru')
                             ->columns(2)
                             ->schema([
                                 TextInput::make('name')
+                                    ->label('Nama Kunci')
                                     ->required()
-                                    ->helperText('The field key (no spaces, e.g., "reason_for_request").'),
+                                    ->helperText('Kunci bidang (tanpa spasi, misal: "alasan_permohonan").'),
                                 TextInput::make('label')
+                                    ->label('Label')
                                     ->required()
-                                    ->helperText('The user-friendly label shown on the form.'),
+                                    ->helperText('Label ramah pengguna yang ditampilkan pada formulir.'),
                                 Select::make('type')
+                                    ->label('Tipe')
                                     ->required()
                                     ->options([
-                                        'text' => 'Text',
-                                        'textarea' => 'Text Area',
-                                        'date' => 'Date',
-                                        'number' => 'Number',
+                                        'text' => 'Teks',
+                                        'textarea' => 'Area Teks',
+                                        'date' => 'Tanggal',
+                                        'number' => 'Angka',
                                     ]),
                                 Toggle::make('is_required')
-                                    ->label('Is this field required?')
+                                    ->label('Apakah bidang ini wajib diisi?')
                                     ->default(false),
                             ]),
                     ]),
 
-                Section::make('PDF Template Editor')
-                    ->description('Design the PDF output. Use Blade variables to insert data.')
+                Section::make('Editor Template PDF')
+                    ->description('Rancang output PDF. Gunakan variabel Blade untuk memasukkan data.')
                     ->collapsed()
                     ->schema([
                         CodeEditor::make('template')
                             ->required()
                             ->columnSpanFull()
-                            ->helperText('Use variables like {{ $applicant->name }} or {{ $additional_data[\'your_field_name\'] }}. You can use any Blade syntax.')
+                            ->helperText('Gunakan variabel seperti {{ $applicant->name }} atau {{ $additional_data[\'nama_bidang_anda\'] }}. Anda dapat menggunakan sintaks Blade apa pun.')
                     ]),
             ]);
     }

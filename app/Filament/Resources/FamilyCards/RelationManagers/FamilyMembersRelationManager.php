@@ -27,18 +27,28 @@ class FamilyMembersRelationManager extends RelationManager
         return $schema
             ->components([
                 TextInput::make('national_id_number')->label('NIK')->required()->unique(ignoreRecord: true),
-                TextInput::make('name')->required(),
-                Select::make('gender')->options(['Male' => 'Male', 'Female' => 'Female'])->required(),
-                TextInput::make('place_of_birth')->required(),
-                DatePicker::make('date_of_birth')->required(),
-                TextInput::make('religion')->required(),
-                Select::make('marital_status')->options(['Single' => 'Single', 'Married' => 'Married', 'Divorced' => 'Divorced'])->required(),
-                TextInput::make('family_relationship_status')->required(),
-                TextInput::make('education')->nullable(),
-                TextInput::make('occupation')->nullable(),
-                TextInput::make('mothers_name')->nullable(),
-                TextInput::make('fathers_name')->nullable(),
-                TextInput::make('blood_type')->nullable(),
+                TextInput::make('name')->label('Nama')->required(),
+                Select::make('gender')
+                    ->label('Jenis Kelamin')
+                    ->options(['Male' => 'Laki-laki', 'Female' => 'Perempuan'])
+                    ->required(),
+                TextInput::make('place_of_birth')->label('Tempat Lahir')->required(),
+                DatePicker::make('date_of_birth')->label('Tanggal Lahir')->required(),
+                TextInput::make('religion')->label('Agama')->required(),
+                Select::make('marital_status')
+                    ->label('Status Perkawinan')
+                    ->options([
+                        'Single' => 'Belum Kawin',
+                        'Married' => 'Kawin',
+                        'Divorced' => 'Cerai',
+                    ])
+                    ->required(),
+                TextInput::make('family_relationship_status')->label('Status Hubungan Keluarga')->required(),
+                TextInput::make('education')->label('Pendidikan')->nullable(),
+                TextInput::make('occupation')->label('Pekerjaan')->nullable(),
+                TextInput::make('mothers_name')->label('Nama Ibu')->nullable(),
+                TextInput::make('fathers_name')->label('Nama Ayah')->nullable(),
+                TextInput::make('blood_type')->label('Golongan Darah')->nullable(),
             ]);
     }
 

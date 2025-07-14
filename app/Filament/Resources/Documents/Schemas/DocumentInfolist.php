@@ -15,25 +15,28 @@ class DocumentInfolist
         return $schema
             ->columns(1)
             ->components([
-                Section::make("Applicant Information")
+                Section::make("Informasi Pemohon")
                     ->columns(2)
                     ->schema([
                         TextEntry::make('applicant.name')
-                            ->label('Applicant Name'),
-                        TextEntry::make('applicant_id'),
+                            ->label('Nama Pemohon'),
+                        TextEntry::make('applicant_id')
+                            ->label('ID Pemohon'),
                         TextEntry::make('documentType.type_name')
-                            ->label('Document Type'),
+                            ->label('Jenis Dokumen'),
                         TextEntry::make('purpose')
-                            ->label('Purpose'),
+                            ->label('Keperluan'),
                         TextEntry::make('signature_date')
-                            ->label('Signature Date')
+                            ->label('Tanggal Tanda Tangan')
                             ->columnSpanFull(),
                         TextEntry::make('created_at')
+                            ->label('Dibuat Pada')
                             ->dateTime(),
                         TextEntry::make('updated_at')
+                            ->label('Diperbarui Pada')
                             ->dateTime(),
                     ]),
-                Section::make("Document Details")
+                Section::make("Detail Dokumen")
                     ->columns(1)
                     ->schema([
                         PdfViewer::make("document.pdf")

@@ -19,8 +19,10 @@ use Filament\Tables\Table;
 class FamilyCardResource extends Resource
 {
     protected static ?string $model = FamilyCard::class;
+    protected static ?string $modelLabel = 'Kartu Keluarga';
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::RectangleGroup;
 
     public static function form(Schema $schema): Schema
     {

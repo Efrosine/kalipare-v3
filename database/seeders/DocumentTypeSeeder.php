@@ -17,49 +17,49 @@ class DocumentTypeSeeder extends Seeder
         // Prepare data array
         $documentTypes = [
             [
-                'type_name' => 'Business Domicile',
+                'type_name' => 'Domisili Usaha',
                 'number_registration' => 'No. Reg : 510.4/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/35.07.11.2002/2025',
                 'form_structure' => json_encode([
                     [
                         "name" => "business_name",
                         "type" => "text",
-                        "label" => "Business Name",
+                        "label" => "Nama Usaha",
                         "is_required" => true
                     ],
                     [
                         "name" => "business_type",
                         "type" => "text",
-                        "label" => "Business Type",
+                        "label" => "Jenis Usaha",
                         "is_required" => false
                     ],
                     [
                         "name" => "business_address",
                         "type" => "text",
-                        "label" => "Business Address",
+                        "label" => "Alamat Usaha",
                         "is_required" => false
                     ],
                     [
                         "name" => "business_status",
                         "type" => "text",
-                        "label" => "Business Status",
+                        "label" => "Status Usaha",
                         "is_required" => false
                     ],
                     [
                         "name" => "business_usage",
                         "type" => "text",
-                        "label" => "Business Usage",
+                        "label" => "Penggunaan Usaha",
                         "is_required" => false
                     ],
                     [
                         "name" => "business_leader",
                         "type" => "text",
-                        "label" => "Business Leader",
+                        "label" => "Pimpinan Usaha",
                         "is_required" => false
                     ],
                     [
                         "name" => "valid_until",
                         "type" => "date",
-                        "label" => "Valid Until",
+                        "label" => "Berlaku Sampai",
                         "is_required" => false
                     ]
                 ]),
@@ -70,7 +70,7 @@ class DocumentTypeSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'type_name' => 'Personal Domicile',
+                'type_name' => 'Domisili Pribadi',
                 'number_registration' => 'No. Reg : 470/&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/35.07.11.2002/2025',
                 'form_structure' => null,
                 'template' => file_get_contents(
@@ -80,31 +80,31 @@ class DocumentTypeSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'type_name' => 'Marriage Certificate',
+                'type_name' => 'Surat Keterangan Menikah',
                 'number_registration' => 'No. Reg : 470/&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/35.07.11.2002/2025',
                 'form_structure' => json_encode([
                     [
                         "name" => "applicant_status",
                         "type" => "text",
-                        "label" => "Applicant Status",
+                        "label" => "Status Pemohon",
                         "is_required" => true
                     ],
                     [
                         "name" => "other_applicant_status",
                         "type" => "text",
-                        "label" => "Other Applicant Status",
+                        "label" => "Status Pemohon Lain",
                         "is_required" => true
                     ],
                     [
                         "name" => "nik-1",
                         "type" => "text",
-                        "label" => "Other Applicant NIK",
+                        "label" => "NIK Pemohon Lain",
                         "is_required" => true
                     ],
                     [
                         "name" => "work_location",
                         "type" => "text",
-                        "label" => "Work Location",
+                        "label" => "Tempat Kerja",
                         "is_required" => true
                     ],
                 ]),
@@ -115,49 +115,49 @@ class DocumentTypeSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'type_name' => 'Institution Domicile',
+                'type_name' => 'Domisili Lembaga',
                 'number_registration' => 'Nomor : 421.1/&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/35.07.11.2002/2025',
                 'form_structure' => json_encode([
                     [
                         "name" => "institution_name",
                         "type" => "text",
-                        "label" => "Institution Name",
+                        "label" => "Nama Lembaga",
                         "is_required" => true
                     ],
                     [
                         "name" => "institution_type",
                         "type" => "text",
-                        "label" => "Institution Type",
+                        "label" => "Jenis Lembaga",
                         "is_required" => true
                     ],
                     [
                         "name" => "institution_nss",
                         "type" => "text",
-                        "label" => "Institution NSS",
+                        "label" => "NSS Lembaga",
                         "is_required" => true
                     ],
                     [
                         "name" => "institution_npsn",
                         "type" => "text",
-                        "label" => "Institution NPSN",
+                        "label" => "NPSN Lembaga",
                         "is_required" => true
                     ],
                     [
                         "name" => "institution_founded_date",
                         "type" => "date",
-                        "label" => "Institution Founded Date",
+                        "label" => "Tanggal Berdiri Lembaga",
                         "is_required" => true
                     ],
                     [
                         "name" => "institution_leader",
                         "type" => "text",
-                        "label" => "Institution Leader",
+                        "label" => "Pimpinan Lembaga",
                         "is_required" => true
                     ],
                     [
                         "name" => "institution_address",
                         "type" => "text",
-                        "label" => "Institution Address",
+                        "label" => "Alamat Lembaga",
                         "is_required" => true
                     ],
 
@@ -169,37 +169,37 @@ class DocumentTypeSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'type_name' => 'Business License',
+                'type_name' => 'Surat Izin Usaha',
                 'number_registration' => 'Reg. No :  518.3/&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/35.07.11.2002/2025',
                 'form_structure' => json_encode([
                     [
                         "name" => "business_type",
                         "type" => "text",
-                        "label" => "Business Type",
+                        "label" => "Jenis Usaha",
                         "is_required" => true
                     ],
                     [
                         "name" => "business_name",
                         "type" => "text",
-                        "label" => "Business Name",
+                        "label" => "Nama Usaha",
                         "is_required" => true
                     ],
                     [
                         "name" => "business_address",
                         "type" => "text",
-                        "label" => "Business Address",
+                        "label" => "Alamat Usaha",
                         "is_required" => true
                     ],
                     [
                         "name" => "business_marketing_area",
                         "type" => "text",
-                        "label" => "Business Marketing Area",
+                        "label" => "Wilayah Pemasaran Usaha",
                         "is_required" => true
                     ],
                     [
                         "name" => "business_founded_year",
                         "type" => "date",
-                        "label" => "Business Founded Year",
+                        "label" => "Tahun Berdiri Usaha",
                         "is_required" => true
                     ]
                 ]),
@@ -216,37 +216,37 @@ class DocumentTypeSeeder extends Seeder
                     [
                         "name" => "dtks_id",
                         "type" => "text",
-                        "label" => "DTKS ID",
+                        "label" => "ID DTKS",
                         "is_required" => false
                     ],
                     [
                         "name" => "nik-1",
                         "type" => "text",
-                        "label" => "Other Applicant NIK",
+                        "label" => "NIK Pemohon Lain",
                         "is_required" => true
                     ],
                     [
                         "name" => "student_class_semester",
                         "type" => "text",
-                        "label" => "Student Class/Semester",
+                        "label" => "Kelas/Semester Siswa",
                         "is_required" => false
                     ],
                     [
                         "name" => "student_current_school",
                         "type" => "text",
-                        "label" => "Student Current School",
+                        "label" => "Sekolah Saat Ini",
                         "is_required" => true
                     ],
                     [
                         "name" => "student_destination_school",
                         "type" => "text",
-                        "label" => "Student Destination School",
+                        "label" => "Sekolah Tujuan",
                         "is_required" => true
                     ],
                     [
                         "name" => "family_relationship",
                         "type" => "text",
-                        "label" => "Family Relationship",
+                        "label" => "Hubungan Keluarga",
                         "is_required" => true
                     ]
 
@@ -264,13 +264,13 @@ class DocumentTypeSeeder extends Seeder
                     [
                         "name" => "nik-1",
                         "type" => "text",
-                        "label" => "Other Applicant NIK",
+                        "label" => "NIK Pemohon Lain",
                         "is_required" => true
                     ],
                     [
                         "name" => "reporter_relationship",
                         "type" => "text",
-                        "label" => "Hubungan pelapor",
+                        "label" => "Hubungan Pelapor",
                         "is_required" => true
                     ],
                     [
@@ -373,3 +373,4 @@ class DocumentTypeSeeder extends Seeder
         DB::table('document_types')->insert($documentTypes);
     }
 }
+

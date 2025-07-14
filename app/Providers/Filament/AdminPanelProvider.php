@@ -2,6 +2,9 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Resources\Documents\Widgets\DocumentCreation;
+use App\Filament\Resources\DocumentTypes\Widgets\DocumentTypeCreation;
+use App\Filament\Widgets\CustomAccountWidget;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -28,17 +31,21 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Blue,
             ])
+            ->topNavigation()
             ->discoverResources(in: app_path('Filament/Admin/Resources'), for: 'App\Filament\Admin\Resources')
+            ->discoverResources(in: app_path('Filament/Resources/Documents'), for: 'App\Filament\Resources\Documents')
+            ->discoverResources(in: app_path('Filament/Resources/FamilyCards'), for: 'App\Filament\Resources\FamilyCards')
             ->discoverPages(in: app_path('Filament/Admin/Pages'), for: 'App\Filament\Admin\Pages')
             ->pages([
                 Dashboard::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Admin/Widgets'), for: 'App\Filament\Admin\Widgets')
             ->widgets([
-                AccountWidget::class,
-                FilamentInfoWidget::class,
+                CustomAccountWidget::class,
+                DocumentTypeCreation::class,
+                DocumentCreation::class,
             ])
             ->middleware([
                 EncryptCookies::class,

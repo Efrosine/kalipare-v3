@@ -24,7 +24,7 @@ class DocumentService
         $document->load('applicant', 'documentType');
 
         // 1. Definisikan path ke gambar logo Anda
-        $pathToLogo = storage_path('app/public/images/logo.png');
+        $pathToLogo = public_path('images/logo.png');
 
         // 2. Ubah gambar menjadi string Base64
         $logoBase64 = '';
@@ -139,7 +139,7 @@ class DocumentService
      */
     public function generateDummyPdf(DocumentType $documentType): Response
     {
-        $pathToLogo = storage_path('app/public/images/logo.png');
+        $pathToLogo = public_path('images/logo.png');
 
         $logoBase64 = '';
         if (file_exists($pathToLogo)) {

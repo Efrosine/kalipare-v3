@@ -16,10 +16,12 @@ class DocumentTypesTable
         return $table
             ->columns([
                 TextColumn::make('type_name')
+                    ->label('Nama Tipe')
                     ->searchable(),
-                TextColumn::make('number_registration'),
+                TextColumn::make('number_registration')
+                    ->label('Nomor Registrasi'),
                 TextColumn::make('updated_at')
-                    ->label('Last Changed')
+                    ->label('Terakhir Diubah')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: false),
@@ -28,12 +30,12 @@ class DocumentTypesTable
                 //
             ])
             ->recordActions([
-                ViewAction::make(),
-                EditAction::make(),
+                ViewAction::make()->label('Lihat'),
+                EditAction::make()->label('Ubah'),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
-                    DeleteBulkAction::make(),
+                    DeleteBulkAction::make()->label('Hapus'),
                 ]),
             ]);
     }

@@ -16,24 +16,33 @@ class FamilyCardsTable
         return $table
             ->columns([
                 TextColumn::make('card_number')
+                    ->label('Nomor Kartu')
                     ->searchable(),
                 TextColumn::make('head_of_family_name')
+                    ->label('Nama Kepala Keluarga')
                     ->searchable(),
                 TextColumn::make('street_address')
+                    ->label('Alamat Jalan')
                     ->searchable(),
                 TextColumn::make('rt')
+                    ->label('RT')
                     ->searchable(),
                 TextColumn::make('rw')
+                    ->label('RW')
                     ->searchable(),
                 TextColumn::make('postal_code')
+                    ->label('Kode Pos')
                     ->searchable(),
                 TextColumn::make('phone_number')
+                    ->label('Nomor Telepon')
                     ->searchable(),
                 TextColumn::make('created_at')
+                    ->label('Dibuat Pada')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
+                    ->label('Diperbarui Pada')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

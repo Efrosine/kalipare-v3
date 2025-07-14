@@ -16,13 +16,14 @@ class DocumentsTable
         return $table
             ->columns([
                 TextColumn::make('applicant.name')
-                    ->label('Applicant Name')
+                    ->label('Nama Pemohon')
                     ->searchable(),
                 TextColumn::make('documentType.type_name')
+                    ->label('Jenis Dokumen')
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('updated_at')
-                    ->label('Last Changed')
+                    ->label('Terakhir Diubah')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: false),

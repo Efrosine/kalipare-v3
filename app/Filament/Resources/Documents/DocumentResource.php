@@ -19,8 +19,9 @@ use Filament\Tables\Table;
 class DocumentResource extends Resource
 {
     protected static ?string $model = Document::class;
+    protected static ?string $modelLabel = 'Dokumen';
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Document;
 
     public static function form(Schema $schema): Schema
     {

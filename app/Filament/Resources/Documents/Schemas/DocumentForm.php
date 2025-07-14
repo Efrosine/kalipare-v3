@@ -20,7 +20,7 @@ class DocumentForm
     {
         return $schema
             ->components([
-                Section::make('Applicant Data')
+                Section::make('Data Pemohon')
                     ->schema([
                         Select::make('applicant_id')
                             ->relationship(
@@ -33,17 +33,17 @@ class DocumentForm
                             ->searchable(['national_id_number', 'name'])
                             ->preload()
                             ->required()
-                            ->label('Select Applicant by National ID Number'),
+                            ->label('Pilih Pemohon berdasarkan NIK'),
                         TextInput::make('purpose')
                             ->required()
-                            ->label('Purpose'),
+                            ->label('Keperluan'),
                         DatePicker::make('signature_date')
                             ->default(now())
                             ->required()
-                            ->label('Signature Date'),
+                            ->label('Tanggal Tanda Tangan'),
                     ]),
 
-                Section::make('Document Details')
+                Section::make('Detail Dokumen')
                     ->schema([
                         Select::make('document_type_id')
                             ->relationship(
@@ -56,8 +56,8 @@ class DocumentForm
                             ->searchable(['type_name', 'number_registration'])
                             ->preload()
                             ->required()
-                            ->live() // IMPORTANT: This makes the form reactive
-                            ->label('Document Type'),
+                            ->live()
+                            ->label('Jenis Dokumen'),
 
                         // --- DYNAMIC FIELDS WILL BE RENDERED HERE ---
                         Grid::make()
