@@ -2,6 +2,9 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Resources\Documents\Widgets\DocumentCreation;
+use App\Filament\Resources\DocumentTypes\Widgets\DocumentTypeCreation;
+use App\Filament\Widgets\CustomAccountWidget;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -41,7 +44,9 @@ class SuperadminPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
             ->widgets([
-                AccountWidget::class
+                CustomAccountWidget::class,
+                DocumentTypeCreation::class,
+                DocumentCreation::class,
             ])
             ->maxContentWidth(Width::Full)
             ->sidebarWidth('15rem')
